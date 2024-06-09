@@ -1,0 +1,7 @@
+**/bin
+**/obj
+**/.vscode
+**/*.txt
+**/.vs
+**/.sln
+**/x64
