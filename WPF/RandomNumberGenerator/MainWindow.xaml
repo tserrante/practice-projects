@@ -11,6 +11,7 @@
     <Grid ShowGridLines="True" Background="DarkGray">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -35,5 +36,10 @@
                 Generate Data
             </Button>
         </StackPanel>
+        <ListView Grid.Row="0" 
+                  Grid.Column="1" 
+                  Grid.RowSpan="2"
+                  ItemsSource="{Binding History}">
+        </ListView>
     </Grid>
 </Window>
