@@ -11,7 +11,7 @@ using RandomNumberGenerator.Commands;
 
 namespace RandomNumberGenerator.ViewModels;
 
-public class MainWindowViewModel
+public class MainWindowViewModel : ViewModelBase
 {
     private RandomData data = new RandomData();
     public string Data 

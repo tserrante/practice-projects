@@ -10,7 +10,7 @@ namespace RandomNumberGenerator.Commands;
 
 public class NewDataCommand : CommandBase
 {
-    public override bool CanExecute(object? parameter) => (parameter as RandomData) != null;
+    public override bool CanExecute(object? parameter) => true;
 
     public override void Execute(object? parameter)
     {
