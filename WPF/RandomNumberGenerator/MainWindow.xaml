@@ -4,8 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RandomNumberGenerator"
-        DataContext="{Binding ViewModel, RelativeSource={RelativeSource Self}}"
         mc:Ignorable="d"
+        DataContext="{Binding CurrentViewModel}"
         Title="MainWindow" Height="450" Width="400">
 
     <Grid ShowGridLines="True" Background="DarkGray">
@@ -40,6 +40,25 @@
                   Grid.Column="1" 
                   Grid.RowSpan="2"
                   ItemsSource="{Binding History}">
-        </ListView>
+			<ListView.ItemContainerStyle>
+				<Style TargetType="ListViewItem">
+					<Setter Property="HorizontalContentAlignment"
+							Value="Stretch" />
+				</Style>
+			</ListView.ItemContainerStyle>
+
+			<ListView.View>
+				<GridView>
+					<GridViewColumn Header="Previous Data">
+						<GridViewColumn.CellTemplate>
+							<DataTemplate>
+								<TextBlock Text="{Binding RandomData}" />
+							</DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+
+		</ListView>
     </Grid>
 </Window>

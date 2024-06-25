@@ -10,16 +10,10 @@ namespace RandomNumberGenerator.Models;
 
 public class RandomData
 {
-    private string data = string.Empty;
-    public string Data
+    private readonly string data;
+    public string Data { get => data; }
+    public RandomData() 
     {
-        get => data;
-        set => data = value;
-    }
-    public RandomData() { }
-
-    public void GetRandomData()
-    {
-        
+        data = new Random().Next(0, 101).ToString();
     }
 }

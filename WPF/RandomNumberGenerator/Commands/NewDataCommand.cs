@@ -14,6 +14,6 @@ public class NewDataCommand : CommandBase
 
     public override void Execute(object? parameter)
     {
-        ((RandomData)parameter).GetRandomData();
+        
     }
 }

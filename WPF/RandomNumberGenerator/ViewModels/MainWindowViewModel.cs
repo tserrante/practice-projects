@@ -8,18 +8,32 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 
 using RandomNumberGenerator.Commands;
+using System.Collections.ObjectModel;
 
 namespace RandomNumberGenerator.ViewModels;
 
 public class MainWindowViewModel : ViewModelBase
 {
-    private RandomData data = new RandomData();
+    private ViewModelBase CurrentViewModel { get; set; }
+
+    private ObservableCollection<RandomDataViewModel> history;
+    public IEnumerable<RandomDataViewModel> History => history;
+
+    private string data = string.Empty;
     public string Data 
     {
-        get => data.Data;
+        get => data;
     }
     private ICommand newDataCommand = null;
-    public List<RandomData> History = new List<RandomData>();
     public ICommand NewDataCommand => newDataCommand ??= new NewDataCommand();
-    public MainWindowViewModel() { }
+    public MainWindowViewModel() 
+    {
+        CurrentViewModel = this;
+        history = new ObservableCollection<RandomDataViewModel>()
+        {
+            new RandomDataViewModel(new RandomData()),
+            new RandomDataViewModel(new RandomData()),
+            new RandomDataViewModel(new RandomData())
+        };
+    }
 }
