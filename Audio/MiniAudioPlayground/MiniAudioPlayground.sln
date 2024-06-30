@@ -8,7 +8,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApplication", "Conso
 		{D6C45B09-F2E6-448B-A439-2DAF6F0A2C66} = {D6C45B09-F2E6-448B-A439-2DAF6F0A2C66}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MiniAudioWrapper", "MiniAudioWrapper\FFMpegWrapper.vcxproj", "{D6C45B09-F2E6-448B-A439-2DAF6F0A2C66}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MiniAudioWrapper", "MiniAudioWrapper\MiniAudioWrapper.vcxproj", "{D6C45B09-F2E6-448B-A439-2DAF6F0A2C66}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

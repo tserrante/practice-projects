@@ -11,4 +11,13 @@
 
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Update="frenchman_taunt.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="winamp_llama.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
