@@ -1,4 +1,5 @@
 ﻿using RandomNumberGenerator.Models;
+using RandomNumberGenerator.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,7 @@ public class NewDataCommand : CommandBase
 
     public override void Execute(object? parameter)
     {
-        
+        ((MainWindowViewModel)parameter).Data = "new value";
     }
+    
 }

@@ -19,10 +19,15 @@ public class MainWindowViewModel : ViewModelBase
     private ObservableCollection<RandomDataViewModel> history;
     public IEnumerable<RandomDataViewModel> History => history;
 
-    private string data = string.Empty;
+    private string data = "test";
     public string Data 
     {
         get => data;
+        set
+        {
+            data = value;
+            OnPropertyChanged(nameof(Data));
+        }
     }
     private ICommand newDataCommand = null;
     public ICommand NewDataCommand => newDataCommand ??= new NewDataCommand();
@@ -30,10 +35,10 @@ public class MainWindowViewModel : ViewModelBase
     {
         CurrentViewModel = this;
         history = new ObservableCollection<RandomDataViewModel>()
-        {
+        /*{
             new RandomDataViewModel(new RandomData()),
             new RandomDataViewModel(new RandomData()),
             new RandomDataViewModel(new RandomData())
-        };
+        }*/;
     }
 }
