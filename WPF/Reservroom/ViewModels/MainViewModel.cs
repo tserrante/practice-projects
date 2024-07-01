@@ -13,6 +13,7 @@ public class MainViewModel : ViewModelBase
 
     public MainViewModel(Hotel hotel)
     {
-        CurrentViewModel = new MakeReservationViewModel(hotel);
+        //CurrentViewModel = new MakeReservationViewModel(hotel);
+        CurrentViewModel = new ReservationListingViewModel();
     }
 }

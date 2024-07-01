@@ -14,8 +14,8 @@ public class MakeReservationViewModel : ViewModelBase
     private string username;
     private int floorNumber;
     private int roomNumber;
-    private DateTime startDate;
-    private DateTime endDate;
+    private DateTime startDate = DateTime.Now;
+    private DateTime endDate = DateTime.Now.AddDays(1);
     public string Username
     {
         get => username;
@@ -69,5 +69,6 @@ public class MakeReservationViewModel : ViewModelBase
     public MakeReservationViewModel(Hotel hotel)
     {
         SubmitCommand = new MakeReservationCommand(this, hotel);
+        CancelCommand = new CancelMakeReservationCommand();
     }
 }
