@@ -1,18 +1,18 @@
 ﻿using RandomNumberGenerator.Models;
 using RandomNumberGenerator.ViewModels;
+using System.Windows.Input;
 
 namespace RandomNumberGenerator.Commands;
 
-public class NewDataCommand : CommandBase
+public class SaveDataCommand : CommandBase
 {
     private readonly MainWindowViewModel mainWindowViewModel;
-    public NewDataCommand(MainWindowViewModel mainWindowViewModel)
+    public SaveDataCommand(MainWindowViewModel mainWindowViewModel)
     {
         this.mainWindowViewModel = mainWindowViewModel;
     }
     public override void Execute(object? parameter)
     {
-        mainWindowViewModel.Data = new RandomData(); ;
+        mainWindowViewModel.AddToHistory(mainWindowViewModel.Data);
     }
-    
 }

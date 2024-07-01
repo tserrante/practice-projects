@@ -16,4 +16,8 @@ public class RandomData
     {
         data = new Random().Next(0, 101).ToString();
     }
+    public RandomData(int a, int b)
+    {
+        data = new Random().Next(a, b).ToString();
+    }
 }

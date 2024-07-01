@@ -12,11 +12,16 @@ namespace Reservroom
     /// </summary>
     public partial class App : Application
     {
+        private readonly Hotel hotel;
+        public App()
+        {
+            hotel = new Hotel("Hotel California");
+        }
         protected override void OnStartup(StartupEventArgs e)
         {
             MainWindow = new MainWindow()
             {
-                DataContext = new MainViewModel()
+                DataContext = new MainViewModel(hotel)
             };
             MainWindow.Show();
 

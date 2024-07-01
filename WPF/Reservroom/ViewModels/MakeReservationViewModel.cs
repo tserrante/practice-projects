@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Reservroom.Commands;
+using Reservroom.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -64,8 +66,8 @@ public class MakeReservationViewModel : ViewModelBase
 
     public ICommand SubmitCommand { get; }
     public ICommand CancelCommand { get; }
-    public MakeReservationViewModel()
+    public MakeReservationViewModel(Hotel hotel)
     {
-        
+        SubmitCommand = new MakeReservationCommand(this, hotel);
     }
 }
